@@ -1,0 +1,10 @@
+import { CloudClient } from "chromadb";
+import dotenv from "dotenv";
+dotenv.config();
+export const chroma = new CloudClient(
+{
+    apiKey: process.env.CHROMA_API_KEY,
+  tenant: process.env.CHROMA_TENANT,
+  database: process.env.CHROMA_DATABASE,
+}
+);
